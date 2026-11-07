@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07152d">
+  <meta name="description" content="Kula Uydu Servisi. İstanbul Anadolu Yakası'nda çanak anten, sinyal ayarı, TV montajı ve merkezi uydu sistemi hizmetleri.">
+  <title>Kula Uydu Servisi | Televizyon ve Uydu Sistemleri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root{--navy:#07152d;--navy2:#0b2144;--blue:#1769e8;--cyan:#35d5e8;--ink:#10213d;--muted:#63718a;--pale:#f3f7fc;--line:#e5ebf4;--green:#16b978}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;font-family:Manrope,Arial,sans-serif;color:var(--ink);background:#fff}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .topline{background:#061127;color:#cbd8ef;font-size:12px;padding:10px 0}
+    .topline .wrap{display:flex;justify-content:space-between;gap:15px;align-items:center}
+    .topline strong{color:#6ce5f0}
+    .topline a{color:white;font-weight:800}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.93);backdrop-filter:blur(18px);border-bottom:1px solid rgba(226,234,245,.9)}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:220px}
+    .brand-icon{width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,#1260dc,#35d5e8);display:grid;place-items:center;color:white;font-size:22px;box-shadow:0 9px 22px #1769e83b}
+    .brand-name{font-weight:900;font-size:21px;letter-spacing:-1px;color:#0b1c39;line-height:1.1}
+    .brand-sub{font-size:9px;letter-spacing:2px;color:#2471dc;font-weight:900;margin-top:5px}
+    .links{display:flex;gap:26px;align-items:center;font-size:13px;font-weight:800;color:#4a5870}
+    .links a:hover{color:#1769e8}
+    .nav-call,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:14px;font-weight:900;transition:.22s}
+    .nav-call{padding:13px 18px;background:#1263df;color:#fff;box-shadow:0 8px 20px #1263df30;font-size:13px}
+    .nav-call:hover,.btn:hover{transform:translateY(-3px);filter:brightness(1.06)}
+    .menu-btn{display:none;border:0;background:#eef4fc;color:#0c2852;border-radius:12px;width:44px;height:44px;font-size:20px}
+    .mobile-menu{display:none;padding:0 20px 20px;background:white}
+    .mobile-menu a{display:block;padding:13px 4px;border-top:1px solid var(--line);font-weight:800;color:#35445c;font-size:14px}
+    .hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(ellipse at 75% 18%,#174d9c 0,transparent 34%),linear-gradient(120deg,#07152d 0%,#0b2144 56%,#102f61 100%);padding:82px 0 78px}
+    .hero:before{content:"";position:absolute;width:520px;height:520px;border:1px solid #8edfff20;border-radius:50%;right:-110px;top:-180px;box-shadow:0 0 0 45px #8edfff08,0 0 0 90px #8edfff06}
+    .hero:after{content:"";position:absolute;inset:auto 0 0;height:1px;background:linear-gradient(90deg,transparent,#55dced80,transparent)}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #75dff044;background:#ffffff0d;color:#a8eff5;padding:9px 14px;border-radius:99px;font-size:11px;font-weight:900;letter-spacing:1.1px}
+    .eyebrow i{color:#56e1ee}
+    h1{font-size:clamp(39px,5vw,64px);line-height:1.08;letter-spacing:-3px;margin:23px 0 20px;font-weight:900}
+    h1 span{background:linear-gradient(90deg,#65e4ef,#65a8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-copy{font-size:16px;line-height:1.9;color:#c2d0e7;max-width:590px;margin:0}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+    .btn{padding:16px 22px;font-size:14px}
+    .btn-primary{background:linear-gradient(110deg,#1769e8,#3297ff);color:white;box-shadow:0 12px 28px #1769e84a}
+    .btn-whatsapp{background:#13b978;color:#fff;box-shadow:0 12px 28px #13b97838}
+    .mini-points{display:flex;gap:24px;flex-wrap:wrap;margin-top:32px;color:#d8e4f5;font-size:12px;font-weight:800}
+    .mini-points span{display:flex;align-items:center;gap:8px}
+    .mini-points i{color:#5ce1bb}
+    .visual{position:relative;min-height:430px;display:grid;place-items:center}
+    .visual-glow{position:absolute;width:350px;height:350px;border-radius:50%;background:#1a8eff40;filter:blur(55px)}
+    .dish-card{position:relative;width:min(100%,430px);height:385px;border:1px solid #ffffff2b;border-radius:32px;background:linear-gradient(145deg,#ffffff20,#ffffff08);backdrop-filter:blur(16px);box-shadow:0 28px 80px #0005;overflow:hidden}
+    .dish-card:before{content:"";position:absolute;width:270px;height:270px;border:1px solid #9ceafa30;border-radius:50%;top:35px;left:80px;box-shadow:0 0 0 25px #9ceafa08,0 0 0 50px #9ceafa06}
+    .dish-svg{position:absolute;width:92%;height:290px;left:4%;top:23px;filter:drop-shadow(0 22px 18px #0005)}
+    .signal{position:absolute;top:40px;right:34px;color:#70f1dc;font-size:21px;transform:rotate(-20deg)}
+    .visual-label{position:absolute;bottom:22px;left:22px;right:22px;background:#06152bdc;border:1px solid #ffffff20;border-radius:18px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .visual-label strong{display:block;font-size:14px}.visual-label small{display:block;color:#aabbd4;margin-top:4px;font-size:11px}
+    .live-dot{width:10px;height:10px;border-radius:50%;background:#35e3a2;box-shadow:0 0 0 6px #35e3a21c;flex:none}
+    .floating-tag{position:absolute;left:-8px;top:70px;background:#fff;color:#132b4e;padding:13px 16px;border-radius:15px;box-shadow:0 15px 35px #0003;font-size:11px;font-weight:900;display:flex;gap:10px;align-items:center}
+    .floating-tag i{color:#1769e8;font-size:18px}
+    .floating-tag.two{left:auto;right:-8px;top:auto;bottom:76px}
+    .trust{position:relative;z-index:2;margin-top:-1px;background:white}
+    .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:20px;background:white;box-shadow:0 16px 45px #17345d0c;transform:translateY(-1px)}
+    .trust-item{padding:23px 18px;display:flex;gap:13px;align-items:center;border-right:1px solid var(--line)}
+    .trust-item:last-child{border:0}
+    .trust-icon{width:43px;height:43px;border-radius:14px;background:#edf5ff;color:#1769e8;display:grid;place-items:center;font-size:18px;flex:none}
+    .trust-item b{display:block;font-size:13px}.trust-item small{display:block;color:#7b879b;font-size:10px;margin-top:4px}
+    section.content{padding:88px 0}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 43px}
+    .kicker{color:#1769e8;font-size:10px;letter-spacing:2px;font-weight:900}
+    .section-head h2,.why-copy h2,.contact-copy h2{font-size:clamp(30px,4vw,44px);letter-spacing:-1.8px;line-height:1.16;margin:13px 0;color:#10213d;font-weight:900}
+    .section-head p{color:#6e7b91;line-height:1.8;font-size:14px;margin:0}
+    .services{background:linear-gradient(180deg,#f5f8fd,#fff)}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .service-card{position:relative;padding:27px 25px 25px;border:1px solid #e7edf6;border-radius:22px;background:#fff;box-shadow:0 12px 35px #15345c08;transition:.25s;overflow:hidden}
+    .service-card:after{content:"";position:absolute;width:110px;height:110px;border-radius:50%;background:#edf5ff;right:-45px;top:-48px;transition:.25s}
+    .service-card:hover{transform:translateY(-7px);border-color:#b9d5ff;box-shadow:0 20px 45px #15345c14}
+    .service-card:hover:after{background:#dcecff;transform:scale(1.2)}
+    .service-icon{position:relative;z-index:1;width:58px;height:58px;border-radius:18px;background:linear-gradient(135deg,#1769e8,#42c5e8);display:grid;place-items:center;color:white;font-size:23px;box-shadow:0 10px 20px #1769e82e;margin-bottom:22px}
+    .service-card h3{font-size:17px;margin:0 0 10px;color:#122442}
+    .service-card p{font-size:12px;line-height:1.85;color:#738097;margin:0 0 18px}
+    .service-card a{font-size:11px;color:#1769e8;font-weight:900}
+    .service-card a i{margin-left:6px;transition:.2s}.service-card a:hover i{margin-left:11px}
+    .why{background:#fff}
+    .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+    .why-visual{min-height:390px;border-radius:30px;background:linear-gradient(145deg,#0b2144,#1769e8);position:relative;overflow:hidden;padding:32px;color:white}
+    .why-visual:before,.why-visual:after{content:"";position:absolute;border:1px solid #ffffff20;border-radius:50%;width:340px;height:340px;right:-90px;top:-110px}
+    .why-visual:after{width:250px;height:250px;right:-45px;top:-65px}
+    .why-visual .big-icon{position:absolute;right:45px;top:65px;font-size:150px;color:#ffffff18;transform:rotate(-15deg)}
+    .why-visual h3{position:relative;font-size:27px;line-height:1.2;max-width:260px;margin:0;letter-spacing:-1px}
+    .why-visual p{position:relative;color:#d5e4ff;font-size:12px;line-height:1.8;max-width:270px;margin-top:14px}
+    .why-badge{position:absolute;bottom:25px;left:25px;right:25px;background:#ffffff17;border:1px solid #ffffff2c;border-radius:18px;padding:17px;display:flex;align-items:center;gap:13px}
+    .why-badge i{font-size:24px;color:#73e7ed}.why-badge b{font-size:13px;display:block}.why-badge small{font-size:10px;color:#c8d9f3}
+    .why-copy h2{margin-top:14px}
+    .why-copy>p{color:#738097;line-height:1.9;font-size:14px}
+    .benefits{display:grid;gap:19px;margin-top:27px}
+    .benefit{display:flex;gap:14px;align-items:flex-start}
+    .check{width:34px;height:34px;flex:none;border-radius:11px;background:#e9fbf4;color:#0aa66b;display:grid;place-items:center}
+    .benefit b{font-size:13px;display:block;margin:1px 0 5px}.benefit p{font-size:11px;color:#7b879b;line-height:1.7;margin:0}
+    .areas{background:#f4f7fc}
+    .area-pills{display:flex;justify-content:center;gap:11px;flex-wrap:wrap;max-width:900px;margin:auto}
+    .area-pills span{background:white;border:1px solid #e2eaf5;padding:12px 19px;border-radius:12px;font-size:12px;font-weight:800;color:#42516b;box-shadow:0 5px 14px #18375b08}
+    .area-note{text-align:center;color:#78859a;font-size:11px;margin-top:24px}
+    .faq-grid{max-width:850px;margin:auto;display:grid;gap:12px}
+    details{background:#fff;border:1px solid #e6edf6;border-radius:16px;padding:0 20px;box-shadow:0 7px 22px #18375b06}
+    summary{cursor:pointer;list-style:none;padding:19px 30px 19px 0;font-size:13px;font-weight:900;color:#1b2d4a;position:relative}
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"+";position:absolute;right:0;top:14px;font-size:22px;color:#1769e8}
+    details[open] summary:after{content:"−"}
+    details p{font-size:12px;line-height:1.8;color:#718097;margin:0 0 19px}
+    .contact{background:linear-gradient(120deg,#07152d,#0d2c5c);color:white;position:relative;overflow:hidden}
+    .contact:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:#1b83ff2b;filter:blur(70px);right:-100px;top:-180px}
+    .contact-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+    .contact-copy .kicker{color:#6ce5ef}
+    .contact-copy h2{color:white}
+    .contact-copy p{color:#bdcde5;font-size:14px;line-height:1.9;max-width:570px}
+    .contact-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}
+    .contact-card{background:#ffffff12;border:1px solid #ffffff25;border-radius:23px;padding:27px;backdrop-filter:blur(12px)}
+    .contact-card .phone-icon{width:54px;height:54px;border-radius:17px;background:#1769e8;display:grid;place-items:center;font-size:22px;margin-bottom:18px}
+    .contact-card small{color:#b9cbe5;font-size:10px;font-weight:900;letter-spacing:1.5px}
+    .contact-card a.number{display:block;font-size:clamp(25px,3vw,34px);font-weight:900;letter-spacing:-1px;margin:7px 0 17px;color:white}
+    .contact-card p{font-size:11px;color:#b9cbe5;line-height:1.7;margin:0 0 18px}
+    footer{background:#050f21;color:#94a5bf;padding:27px 0;font-size:10px}
+    footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:15px}
+    footer a{color:#73b5ff;font-weight:900}
+    .float-actions{position:fixed;right:19px;bottom:20px;z-index:60;display:flex;flex-direction:column;gap:10px}
+    .float-actions a{width:54px;height:54px;border-radius:18px;display:grid;place-items:center;color:white;font-size:23px;box-shadow:0 10px 25px #06152d35;transition:.2s}
+    .float-actions a:hover{transform:translateY(-4px)}
+    .float-wa{background:#13b978}.float-call{background:#1769e8}
+    @media(max-width:900px){.links{gap:14px}.links a{font-size:11px}.hero-grid{gap:20px}.trust-item{padding:17px 12px}.why-grid{gap:35px}}
+    @media(max-width:720px){
+      .wrap{width:min(100% - 30px,560px)}
+      .topline .wrap{justify-content:center;text-align:center}.topline .top-right{display:none}
+      .nav{height:72px}.links,.nav-call{display:none}.menu-btn{display:block}
+      .mobile-menu.open{display:block}
+      .brand-name{font-size:19px}
+      .hero{padding:60px 0 55px}.hero-grid{grid-template-columns:1fr;gap:28px}
+      h1{letter-spacing:-2px;margin-top:19px}
+      .hero-copy{font-size:14px}
+      .hero-actions{display:grid;grid-template-columns:1fr}
+      .btn{width:100%}
+      .mini-points{gap:13px;font-size:10px}
+      .visual{min-height:350px}
+      .dish-card{height:330px;max-width:390px}
+      .dish-svg{height:250px}
+      .floating-tag{left:-2px;top:30px}.floating-tag.two{right:-2px;bottom:58px}
+      .trust-grid{grid-template-columns:1fr 1fr;transform:none;margin:15px 0;border-radius:17px}
+      .trust-item{border-bottom:1px solid var(--line)}.trust-item:nth-child(2){border-right:0}.trust-item:nth-child(3){border-bottom:0}.trust-item:last-child{border-bottom:0}
+      section.content{padding:65px 0}
+      .service-grid{grid-template-columns:1fr;gap:14px}
+      .service-card{padding:23px}
+      .why-grid,.contact-grid{grid-template-columns:1fr;gap:30px}
+      .why-visual{min-height:320px}
+      .why-visual .big-icon{font-size:115px;right:28px}
+      .contact-card{padding:23px}
+      footer .wrap{flex-direction:column;text-align:center}
+      .float-actions{right:12px;bottom:12px}.float-actions a{width:49px;height:49px;border-radius:16px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topline">
+    <div class="wrap">
+      <div><strong>● KULA UYDU SERVİSİ</strong> <span style="margin-left:8px">İstanbul Anadolu Yakası'nda uydu ve TV teknik servisi</span></div>
+      <div class="top-right"><i class="fa-solid fa-phone"></i> <a href="tel:05306920440">0530 692 04 40</a></div>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap nav">
+      <a href="#anasayfa" class="brand" aria-label="Kula Uydu ana sayfa">
+        <div class="brand-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+        <div><div class="brand-name">KULA UYDU</div><div class="brand-sub">TEKNİK SERVİS</div></div>
+      </a>
+      <nav class="links" aria-label="Ana menü">
+        <a href="#anasayfa">Ana Sayfa</a><a href="#hizmetler">Hizmetler</a><a href="#neden-biz">Hakkımızda</a><a href="#bolgeler">Bölgeler</a><a href="#sss">Sorular</a>
+      </nav>
+      <a class="nav-call" href="tel:05306920440"><i class="fa-solid fa-phone"></i> 0530 692 04 40</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Menüyü aç" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu">
+      <a href="#anasayfa">Ana Sayfa</a><a href="#hizmetler">Hizmetlerimiz</a><a href="#neden-biz">Neden Kula Uydu?</a><a href="#bolgeler">Hizmet Bölgeleri</a><a href="#sss">Sıkça Sorulan Sorular</a><a href="tel:05306920440">Telefonla Ara: 0530 692 04 40</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="anasayfa">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><i class="fa-solid fa-satellite-dish"></i> İSTANBUL ANADOLU YAKASI SERVİSİ</div>
+          <h1>Yayınınızın Keyfi<br><span>Kesintiye Uğramasın.</span></h1>
+          <p class="hero-copy">Çanak anten kurulumu, sinyal ayarı, televizyon montajı ve merkezi uydu sistemi işlemleri için Kula Uydu Servisi yanınızda. İhtiyacınızı anlatın, servis bilgisi alın.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:05306920440"><i class="fa-solid fa-phone"></i> Hemen Bizi Arayın</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/905306920440?text=Merhaba%2C%20uydu%20servis%20hizmeti%20almak%20istiyorum." target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp'tan Yazın</a>
+          </div>
+          <div class="mini-points">
+            <span><i class="fa-solid fa-circle-check"></i> İşlem öncesi fiyat bilgisi</span>
+            <span><i class="fa-solid fa-circle-check"></i> Yerinde servis</span>
+            <span><i class="fa-solid fa-circle-check"></i> Doğrudan iletişim</span>
+          </div>
+        </div>
+
+        <div class="visual" aria-label="Uydu anteni illüstrasyonu">
+          <div class="visual-glow"></div>
+          <div class="floating-tag"><i class="fa-solid fa-signal"></i> Sinyal ve yayın çözümleri</div>
+          <div class="dish-card">
+            <i class="fa-solid fa-wifi signal"></i>
+            <svg class="dish-svg" viewBox="0 0 440 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Stilize çanak anten çizimi">
+              <defs>
+                <linearGradient id="dishFill" x1="85" y1="70" x2="325" y2="245" gradientUnits="userSpaceOnUse"><stop stop-color="#8BE9F1"/><stop offset=".48" stop-color="#2589F5"/><stop offset="1" stop-color="#123E9A"/></linearGradient>
+                <linearGradient id="armFill" x1="260" y1="175" x2="345" y2="275" gradientUnits="userSpaceOnUse"><stop stop-color="#DDF8FF"/><stop offset="1" stop-color="#5D91C9"/></linearGradient>
+              </defs>
+              <ellipse cx="195" cy="145" rx="137" ry="105" transform="rotate(-25 195 145)" fill="url(#dishFill)" stroke="#C8F8FF" stroke-width="5"/>
+              <ellipse cx="195" cy="145" rx="104" ry="78" transform="rotate(-25 195 145)" stroke="#C5F7FF" stroke-opacity=".5" stroke-width="2"/>
+              <path d="M88 91C143 130 230 180 300 196" stroke="#E7FDFF" stroke-opacity=".45" stroke-width="3"/>
+              <path d="M122 55C171 104 228 160 270 231" stroke="#E7FDFF" stroke-opacity=".25" stroke-width="3"/>
+              <path d="M190 221L254 271L320 271" stroke="url(#armFill)" stroke-width="12" stroke-linecap="round"/>
+              <path d="M254 271L254 292" stroke="#DDF8FF" stroke-width="12" stroke-linecap="round"/>
+              <path d="M314 185L343 202L333 219L304 202Z" fill="#DDF8FF"/>
+              <path d="M343 202L367 188" stroke="#DDF8FF" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="370" cy="186" r="9" fill="#64E9E7" stroke="white" stroke-width="3"/>
+              <path d="M347 152C362 141 383 142 397 153" stroke="#74E8F3" stroke-width="4" stroke-linecap="round"/>
+              <path d="M355 130C379 112 409 115 426 133" stroke="#74E8F3" stroke-width="4" stroke-linecap="round" opacity=".75"/>
+              <circle cx="195" cy="145" r="7" fill="#E8FDFF"/>
+            </svg>
+            <div class="visual-label"><div><strong>Uydu & Televizyon Teknik Servisi</strong><small>Kurulum · Ayar · Arıza tespiti</small></div><span class="live-dot"></span></div>
+          </div>
+          <div class="floating-tag two"><i class="fa-solid fa-tv"></i> TV montaj ve bağlantı</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust">
+      <div class="wrap trust-grid">
+        <div class="trust-item"><div class="trust-icon"><i class="fa-solid fa-satellite"></i></div><div><b>Çanak Anten</b><small>Kurulum ve yön ayarı</small></div></div>
+        <div class="trust-item"><div class="trust-icon"><i class="fa-solid fa-tv"></i></div><div><b>TV Montajı</b><small>Duvar askı aparatı</small></div></div>
+        <div class="trust-item"><div class="trust-icon"><i class="fa-solid fa-wave-square"></i></div><div><b>Sinyal Sorunları</b><small>Arıza tespiti</small></div></div>
+        <div class="trust-item"><div class="trust-icon"><i class="fa-solid fa-diagram-project"></i></div><div><b>Merkezi Sistem</b><small>Santral ve bağlantı</small></div></div>
+      </div>
+    </div>
+
+    <section class="content services" id="hizmetler">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">HİZMETLERİMİZ</div><h2>Her Yayın Sorununa<br>Bir Çözüm Yolu.</h2><p>Uydu ve televizyon sistemleriniz için ihtiyaç duyduğunuz teknik servis hizmetlerini tek noktadan alın.</p></div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-icon"><i class="fa-solid fa-satellite"></i></div><h3>Çanak Anten Kurulumu</h3><p>Çanak anten montajı, yön ayarı ve yayın kalitesini etkileyen sinyal sorunlarının kontrolü.</p><a href="tel:05306920440">Servis için arayın <i class="fa-solid fa-arrow-right"></i></a></article>
+          <article class="service-card"><div class="service-icon"><i class="fa-solid fa-tv"></i></div><h3>TV Duvar Montajı</h3><p>LED, OLED, QLED ve diğer televizyonlar için duvar askı aparatı montajı ve bağlantı desteği.</p><a href="tel:05306920440">Servis için arayın <i class="fa-solid fa-arrow-right"></i></a></article>
+          <article class="service-card"><div class="service-icon"><i class="fa-solid fa-diagram-project"></i></div><h3>Merkezi Uydu Sistemleri</h3><p>Apartman ve sitelerde merkezi uydu sistemi, multiswitch santral ve daire bağlantılarının kontrolü.</p><a href="tel:05306920440">Servis için arayın <i class="fa-solid fa-arrow-right"></i></a></article>
+          <article class="service-card"><div class="service-icon"><i class="fa-solid fa-wave-square"></i></div><h3>Sinyal Yok Arızası</h3><p>Sinyal kaybı, kablo bağlantısı, LNB veya merkezi sistem kaynaklı sorunlar için arıza tespiti.</p><a href="tel:05306920440">Servis için arayın <i class="fa-solid fa-arrow-right"></i></a></article>
+          <article class="service-card"><div class="service-icon"><i class="fa-solid fa-sliders"></i></div><h3>Kanal Ayarı ve Kurulum</h3><p>Uydu alıcısı kurulumu, kanal arama, kanal sıralama ve televizyon ayarları.</p><a href="tel:05306920440">Servis için arayın <i class="fa-solid fa-arrow-right"></i></a></article>
+          <article class="service-card"><div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div><h3>Kablolama ve Malzeme</h3><p>Uydu kablosu çekimi, LNB ve bağlantı elemanlarının kontrolü ve gerektiğinde yenilenmesi.</p><a href="tel:05306920440">Servis için arayın <i class="fa-solid fa-arrow-right"></i></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content why" id="neden-biz">
+      <div class="wrap why-grid">
+        <div class="why-visual">
+          <i class="fa-solid fa-satellite-dish big-icon"></i>
+          <div class="kicker" style="color:#7ce8ef">KULA UYDU SERVİSİ</div>
+          <h3>Bağlantınız güçlü, keyfiniz yerinde olsun.</h3>
+          <p>Uydu ve televizyon sistemleriniz için ihtiyacınıza uygun servis desteği.</p>
+          <div class="why-badge"><i class="fa-solid fa-headset"></i><div><b>Doğrudan Ustaya Ulaşın</b><small>Telefon veya WhatsApp üzerinden iletişim</small></div></div>
+        </div>
+        <div class="why-copy">
+          <div class="kicker">NEDEN KULA UYDU?</div>
+          <h2>İşin Başından Sonuna<br>Açık ve Net İletişim.</h2>
+          <p>Servis ihtiyacınızı bize anlatın. Yapılacak işlem, uygunluk ve fiyat bilgisi hakkında görüşerek süreci birlikte netleştirelim.</p>
+          <div class="benefits">
+            <div class="benefit"><div class="check"><i class="fa-solid fa-check"></i></div><div><b>Yerinde Servis İmkânı</b><p>Adresinizi ve ihtiyacınızı ileterek servis uygunluğunu öğrenebilirsiniz.</p></div></div>
+            <div class="benefit"><div class="check"><i class="fa-solid fa-check"></i></div><div><b>İşlem Öncesi Fiyat Bilgisi</b><p>Yapılacak iş ve kullanılacak malzemeye göre önceden fiyat bilgisi alabilirsiniz.</p></div></div>
+            <div class="benefit"><div class="check"><i class="fa-solid fa-check"></i></div><div><b>İhtiyaca Uygun Teknik Destek</b><p>Arıza veya kurulum ihtiyacınıza göre çözüm seçenekleri değerlendirilir.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content areas" id="bolgeler">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">HİZMET BÖLGELERİ</div><h2>Anadolu Yakası'nda<br>Hizmet Noktalarımız.</h2><p>Bulunduğunuz ilçeyi belirterek servis kapsamı ve randevu uygunluğu hakkında bilgi alın.</p></div>
+        <div class="area-pills">
+          <span>Kadıköy</span><span>Üsküdar</span><span>Ataşehir</span><span>Ümraniye</span><span>Maltepe</span><span>Kartal</span><span>Pendik</span><span>Tuzla</span><span>Beykoz</span><span>Sancaktepe</span><span>Sultanbeyli</span><span>Çekmeköy</span><span>Şile</span><span>Adalar</span>
+        </div>
+        <div class="area-note"><i class="fa-solid fa-location-dot"></i> Servis uygunluğu için lütfen telefonla bilgi alınız.</div>
+      </div>
+    </section>
+
+    <section class="content" id="sss">
+      <div class="wrap">
+        <div class="section-head"><div class="kicker">MERAK EDİLENLER</div><h2>Sıkça Sorulan Sorular</h2><p>Aklınıza takılanlar için kısa cevaplar.</p></div>
+        <div class="faq-grid">
+          <details><summary>Servis ücreti ne kadar?</summary><p>Servis ücreti yapılacak işleme, arızanın durumuna ve kullanılacak parçaya göre değişebilir. İşleme başlamadan önce fiyat bilgisi almak için bizi arayabilirsiniz.</p></details>
+          <details><summary>Ne zaman servis gelebilir?</summary><p>Servis zamanı bulunduğunuz ilçe, gün içindeki yoğunluk ve randevu durumuna göre belirlenir. Uygunluk bilgisi için telefonla iletişime geçebilirsiniz.</p></details>
+          <details><summary>Hangi işlemler için servis çağırabilirim?</summary><p>Çanak anten kurulumu ve ayarı, sinyal sorunları, TV duvar montajı, uydu kablolaması ve merkezi sistem arızaları için bize ulaşabilirsiniz.</p></details>
+          <details><summary>WhatsApp üzerinden bilgi alabilir miyim?</summary><p>Evet. Sorununuzu kısaca yazarak veya ilgili fotoğrafı paylaşarak WhatsApp üzerinden bizimle iletişime geçebilirsiniz.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="content contact" id="iletisim">
+      <div class="wrap contact-grid">
+        <div class="contact-copy">
+          <div class="kicker">BİZE ULAŞIN</div>
+          <h2>Servis İçin Bir Telefon Yeter.</h2>
+          <p>Televizyonunuzda sinyal sorunu mu var? Çanak anten kurulumu veya teknik destek mi gerekiyor? Hemen arayın ya da WhatsApp'tan yazın.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="tel:05306920440"><i class="fa-solid fa-phone"></i> Şimdi Arayın</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/905306920440" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="phone-icon"><i class="fa-solid fa-headset"></i></div>
+          <small>KULA UYDU SERVİSİ İLETİŞİM</small>
+          <a class="number" href="tel:05306920440">0530 692 04 40</a>
+          <p>Hizmet, fiyat ve randevu bilgisi almak için doğrudan iletişime geçin.</p>
+          <a class="btn btn-primary" style="width:100%" href="tel:05306920440"><i class="fa-solid fa-phone"></i> Telefonla İletişim</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap"><div>© 2026 Kula Uydu Servisi. Tüm hakları saklıdır.</div><div>İstanbul Anadolu Yakası · <a href="tel:05306920440">0530 692 04 40</a></div></div>
+  </footer>
+
+  <div class="float-actions">
+    <a class="float-wa" href="https://wa.me/905306920440" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp'tan yazın"><i class="fa-brands fa-whatsapp"></i></a>
+    <a class="float-call" href="tel:05306920440" aria-label="Telefonla arayın"><i class="fa-solid fa-phone"></i></a>
+  </div>
+
+  <script>
+    const menuBtn=document.getElementById('menuBtn');
+    const mobileMenu=document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click',()=>{
+      const opened=mobileMenu.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded',String(opened));
+      menuBtn.innerHTML=opened?'<i class="fa-solid fa-xmark"></i>':'<i class="fa-solid fa-bars"></i>';
+    });
+    document.querySelectorAll('#mobileMenu a').forEach(link=>link.addEventListener('click',()=>{
+      mobileMenu.classList.remove('open');
+      menuBtn.setAttribute('aria-expanded','false');
+      menuBtn.innerHTML='<i class="fa-solid fa-bars"></i>';
+    }));
+  </script>
+</body>
+</html>
